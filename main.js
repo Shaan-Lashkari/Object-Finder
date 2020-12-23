@@ -11,6 +11,9 @@ function draw(){
     image(video,0,0,500,400);
 }
 function start(){
-    var val = document.getElementById("val-of-obj-nm").value;
-    alert("#" + val);
+   objectDetector = ml5.objectDetector('cocossd', modelLoaded);
+   document.getElementById("status").innerHTML = "Status : Detecting Objects";
+}
+function modelLoaded(){
+    console.log("Model Loaded !");
 }
